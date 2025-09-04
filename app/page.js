@@ -18,7 +18,7 @@ export default async function Home() {
   const products = await getProducts();
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<p>Page Loading...</p>}>
       <ProductList products={products} />
     </Suspense>
   );
