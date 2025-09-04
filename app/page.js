@@ -3,8 +3,10 @@ import ProductList from "./components/ProductList";
 
 export const dynamic = "force-dynamic"; // Optional: force SSR on each request
 
+// export const base_url = process.env.BASE_URL;
+
 async function getProducts() {
-  const res = await fetch("http://localhost:3000/api/products", {
+  const res = await fetch(`${process.env.BASE_URL}/api/products`, {
     cache: "no-store", // Don't cache for SSR
   });
 
